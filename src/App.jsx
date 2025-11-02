@@ -5,7 +5,11 @@ function App() {
     return (
       <>
         <Header />
-        <h1>The beginning of Infinity</h1>
+        <form>
+          <input type = "text" placeholder = "How many people?"></input>
+          <input type = "text" placeholder = "How much time do you have?"></input>
+          <input type = "submit" text = "Submit" />
+        </form>
       </>
     )
 }
