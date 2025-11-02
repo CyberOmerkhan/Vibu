@@ -1,8 +1,12 @@
 import './index.css'
+import Header from './intro-header'
 
 function App() {
     return (
-      <h1>The beginning of Infinity</h1>
+      <>
+        <Header />
+        <h1>The beginning of Infinity</h1>
+      </>
     )
 }
 
