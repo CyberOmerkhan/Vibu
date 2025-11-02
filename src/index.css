@@ -11,3 +11,10 @@ html, body{
 #logo {
   width: 150px;
 }
+
+.intro-form{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
