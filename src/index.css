@@ -15,6 +15,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 header {
@@ -46,6 +47,20 @@ header h1 {
   flex-direction: column;
   gap: 10px;
 }
+
+.intro-inputs textarea {
+  max-width: 100%;
+  max-height: 40px;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  background-color: #3B4877;
+  border: none;
+  resize: none;         /* optional: stops user resizing */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 
 .intro-inputs input {
   width: 100%;
