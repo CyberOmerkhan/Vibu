@@ -9,7 +9,7 @@ function App() {
           <form class = "intro-inputs">
             <input type = "text" placeholder = "How many people?"></input>
             <input type = "text" placeholder = "How much time do you have?"></input>
-            <input type = "submit" text = "Submit" />
+            <input class = "form-btn" type = "submit" text = "Submit" />
           </form>
         </div>
       </>
