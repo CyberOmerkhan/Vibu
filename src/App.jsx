@@ -3,7 +3,7 @@ import Header from './intro-header'
 
 function App() {
     return (
-      <div className = "intro">
+      <main>
         <Header />
         <div className = "intro-form">
           <form className = "intro-inputs">
@@ -12,7 +12,7 @@ function App() {
             <input className = "form-btn" type = "submit" text = "Submit" />
           </form>
         </div>
-      </div>
+      </main>
     )
 }
 
