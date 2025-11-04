@@ -45,33 +45,35 @@ header h1 {
   width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 40px;
 }
 
 .intro-inputs textarea {
-  max-width: 100%;
-  max-height: 40px;
-  padding: 20px;
-  font-size: 1.2rem;
-  border-radius: 15px;
   background-color: #3B4877;
   border: none;
-  resize: none;         /* optional: stops user resizing */
-  -webkit-appearance: none;
-  appearance: none;
+  max-width: 100%;
+  max-height: 50px;
 }
 
 
-.intro-inputs input {
+.intro-inputs input, textarea {
   width: 100%;
   padding: 20px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   border-radius: 15px;
+  color: #ffffff;
   background-color: #3B4877;
   border: none;
 }
 
-.intro-inputs input::placeholder{
+.intro-inputs label {
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.intro-inputs input::placeholder, textarea::placeholder{
+  font-size: 1.2rem;
   color: #000C36;
 }
 

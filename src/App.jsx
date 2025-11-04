@@ -9,7 +9,7 @@ function App() {
           <form className = "intro-inputs">
             <label>
               What's your favorite movie and why?
-              <textarea placeholder = "The Shawshank Redemption because it taught me "></textarea>
+              <textarea placeholder = "The Shawshank Redemption because it taught me to never give up hope no matter how hard the life gets"></textarea>
             </label>
             <label>
               Are you in the mood for something new or classic?
