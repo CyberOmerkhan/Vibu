@@ -16,7 +16,7 @@ function App() {
               <input type = "text" placeholder = "I want to watch movies that were released after 1990"></input>
             </label>
             <label>
-              Do you wanna have fun or do you want something serious?
+              Do you want to have fun or do you want something serious?
               <input type = "text" placeholder = "I want to watch something stupid and fun"></input>
             </label>
             <input className = "form-btn" type = "submit" text = "Submit" />
