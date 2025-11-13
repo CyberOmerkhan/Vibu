@@ -8,7 +8,7 @@ async function handleSubmit(e) {
   const mood = formData.get("mood");
   const genre = formData.get("genre");
 
-  const response = await fetch("http://localhost:3001/api", {
+  const response = await fetch("http://localhost:3000/api", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
