@@ -28,6 +28,7 @@ async function embedMovies() {
 async function serverSetup() {
     console.log(`The server is running on a port ${PORT}\n`);
     const moviesWithEmbeddings = await embedMovies();
+    console.log(moviesWithEmbeddings);
 }
 
 const server = http.createServer(async (req, res) => {
