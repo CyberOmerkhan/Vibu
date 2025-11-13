@@ -1,6 +1,6 @@
 import http from "http"
 
-const PORT = 3000;
+const PORT = 5173;
 
 const server = http.createServer(async (req, res) => {
     if(req.url == "/api" && req.method == "POST"){
