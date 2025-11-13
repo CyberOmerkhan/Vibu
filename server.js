@@ -2,6 +2,7 @@ import http from "http"
 import movies from "./movies.js"
 import OpenAI from "openai";
 import "dotenv/config"
+import cosineSimilarity from "cosine-similarity";
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
