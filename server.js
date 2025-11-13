@@ -18,7 +18,7 @@ const server = http.createServer(async (req, res) => {
                 res.setHeader("Content-Type", "text/plain");
                 res.end("YOOO you've got this");
             } catch (err) {
-                console.error("JSON parse error:", err);
+                console.error("JSON parse error:", err);w
                 res.statusCode = 400;
                 res.end("Bad JSON");
             }
