@@ -7,6 +7,7 @@ function handleSubmit(e) {
   const favorite_movie = formData.get("favorite-movie");
   const mood = formData.get("mood");
   const genre = formData.get("genre");
+  console.log("favorite movie:", favorite_movie, "\nmood:", mood, "\ngenre:", genre);
 }
 
 function App() {
