@@ -1,5 +1,7 @@
 import http from "http"
 
+const PORT = 3000;
+
 const server = http.createServer(async (req, res) => {
     if(req.url == "/api"){
         res.statusCode = 200;
@@ -11,3 +13,6 @@ const server = http.createServer(async (req, res) => {
     }
 })
 
+server.listen(PORT, () => {
+    console.log(`The server is running on a port ${PORT}`)
+})
