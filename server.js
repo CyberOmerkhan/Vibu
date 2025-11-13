@@ -3,7 +3,7 @@ import http from "http"
 const PORT = 3000;
 
 const server = http.createServer(async (req, res) => {
-    if(req.url == "/api"){
+    if(req.url == "/api" && req.method == "POST"){
         res.statusCode = 200;
         res.end("YOOO you've got this")
     }

@@ -1,12 +1,24 @@
 import './index.css'
 import Header from './intro-header'
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const favorite_movie = formData.get("favorite-movie");
+  const favoriteMovie = formData.get("favorite-movie");
   const mood = formData.get("mood");
   const genre = formData.get("genre");
+
+  const response = await fetch("http://localhost:3001/api", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      favoriteMovie: favoriteMovie,
+      mood: mood,
+      genre: genre,
+    })
+  });
   console.log("favorite movie:", favorite_movie, "\nmood:", mood, "\ngenre:", genre);
 }
 
