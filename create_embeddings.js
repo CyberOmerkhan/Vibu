@@ -1,6 +1,9 @@
 import OpenAI from "openai";
+import "dotenv/config"
 
-const openai = OpenAI();
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
 
 const embedding = await openai.embeddings.create({
     model: "text-embedding-3-small",
