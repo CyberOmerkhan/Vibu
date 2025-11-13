@@ -1,11 +1,33 @@
 import http from "http"
 import movies from "./movies.js"
+import OpenAI from "openai";
+import "dotenv/config"
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
 
 const PORT = 3000;
 
-function serverSetup() {
+async function embedMovies() {
+    const embeddings = await Promise.all(
+        movies.map(async (movie) => {
+            const response = await openai.embeddings.create({
+                model: "text-embedding-3-small",
+                input: `${movie.title}\n${movie.text}`,
+            });
+            return {
+                ...movie,
+                embedding: response.data[0].embedding,
+            };
+        })
+    );
+    return embeddings
+}
+
+async function serverSetup() {
     console.log(`The server is running on a port ${PORT}\n`);
-    console.log(movies)
+    const moviesWithEmbeddings = await embedMovies();
 }
 
 const server = http.createServer(async (req, res) => {
