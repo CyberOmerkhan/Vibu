@@ -1,12 +1,17 @@
 import http from "http"
+import movies from "./movies.js"
 
 const PORT = 3000;
+
+function serverSetup() {
+    console.log(`The server is running on a port ${PORT}\n`);
+    console.log(movies)
+}
 
 const server = http.createServer(async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    
     if(req.method == "OPTIONS") {
         res.writeHead(204);
         return res.end();
@@ -38,6 +43,4 @@ const server = http.createServer(async (req, res) => {
     }
 })
 
-server.listen(PORT, () => {
-    console.log(`The server is running on a port ${PORT}`)
-})
+server.listen(PORT, () => serverSetup())
