@@ -7,7 +7,7 @@ const server = http.createServer(async (req, res) => {
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-    if(res.method == "OPTIONS") {
+    if(req.method == "OPTIONS") {
         res.writeHead(204);
         return res.end();
     }
