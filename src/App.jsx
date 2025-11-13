@@ -19,7 +19,7 @@ async function handleSubmit(e) {
       genre: genre,
     })
   });
-  console.log("favorite movie:", favorite_movie, "\nmood:", mood, "\ngenre:", genre);
+  console.log("favorite movie:", favoriteMovie, "\nmood:", mood, "\ngenre:", genre);
 }
 
 function App() {

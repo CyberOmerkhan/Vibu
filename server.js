@@ -1,8 +1,16 @@
 import http from "http"
 
-const PORT = 5173;
+const PORT = 3000;
 
 const server = http.createServer(async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+    if(res.method == "OPTIONS") {
+        res.writeHead(204);
+        return res.end();
+    }
     if(req.url == "/api" && req.method == "POST"){
         let body = "";
         req.on("data", (chunk) => {
