@@ -10,4 +10,4 @@ const embedding = await openai.embeddings.create({
     input: "I am the lion. The lion and the fox",
 })
 
-console.log(embedding)
+console.log(embedding.data[0].embedding)
