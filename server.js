@@ -3,6 +3,7 @@ import http from "http"
 const PORT = 3000;
 
 const server = http.createServer(async (req, res) => {
+    console.log(req.url)
     if(req.url == "/api" && req.method == "POST"){
         let body = "";
         req.on("data", (chunk) => {
