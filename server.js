@@ -18,6 +18,7 @@ async function embedMovies() {
                 input: `${movie.title}\n${movie.text}`,
             });
             return {
+                
                 ...movie,
                 embedding: response.data[0].embedding,
             };
