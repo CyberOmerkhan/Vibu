@@ -17,8 +17,7 @@ async function embedMovies() {
                 model: "text-embedding-3-small",
                 input: `${movie.title}\n${movie.text}`,
             });
-            return {
-                
+            return {  
                 ...movie,
                 embedding: response.data[0].embedding,
             };
